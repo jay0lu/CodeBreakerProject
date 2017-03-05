@@ -17,14 +17,14 @@ function guess() {
 
 //implement new functions here
 function setHiddenFields() {
-    var randomVar = Math.random()*10000;
-    var answerNum = Math.floor(randomVar);
-    var answer = answerNum.toString();
+    let randomVar = Math.random()*10000;
+    let answerNum = Math.floor(randomVar);
+    answer = answerNum.toString();
     while(answer.length < 4) {
         answer = '0' + answer;
     }
 
-    var attempt = 0;
+    let attempt = 0;
 }
 
 function setMessage(message) {
@@ -38,4 +38,18 @@ function validateInput(data) {
         setMessage("Guesses must be exactly 4 characters long.");
         return false;
     }
+}
+
+function getResults(input) {
+    let htmlStr1 = '<div class="row"><span class="col-md-6">';
+    let htmlStr2 = '</span> <div class="col-md-6">';
+    let correctPosition = '<span class="glyphicon glyphicon-ok"></span>';
+    let inAnswer = '<span class="glyphicon glyphicon-transfer"></span>';
+    let notInAnswer = '<span class="glyphicon glyphicon-remove"></span>';
+    for(i in input){
+
+    }
+    
+    outPut = '';
+    document.getElementById(results).innerHTML = outPut;
 }
